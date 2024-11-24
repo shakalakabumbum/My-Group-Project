@@ -1,0 +1,302 @@
+/* General Page Setup */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 35px;
+    background-color: #f6e0b1;
+    /* Soft light yellow */
+    position: relative;
+    z-index: 1;
+    /* Ensure header is above other content */
+}
+
+/* Navigation Styling */
+
+header p {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+}
+
+header nav ul {
+    list-style-type: none;
+    font-size: 8vw;
+    display: flex;
+    gap: 0.5vw;
+}
+
+header nav ul li {
+    font-size: 2vw;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    padding: 10px 20px;
+    background-color: #f6e0b1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #ffcc00;
+    /* Bright yellow for hover effect */
+}
+
+/* Parallax Effect */
+.parallax {
+    min-height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    will-change: background-position;
+}
+
+/* Content Section Styling */
+.content {
+    padding: 50px;
+    background-color: #a8f45368;
+    /* Soft light green */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #b2e8ff;
+    /* Light blue background */
+}
+
+/* Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #ffcc00;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ff9900;
+}
+
+/* Fade-In Animation */
+.fade-in {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-Up Animation */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Zoom-In Animation */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 1s forwards;
+}
+
+@keyframes zoomIn {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Resources Info Section Styling */
+#resources-info {
+    background-color: #aeeaf7;
+    /* Light blue background for the section */
+    padding: 60px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Responsive grid layout */
+    gap: 30px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+/* Resource Category Cards */
+.resource-category {
+    background-color: #bcf6f2;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    /* Ensure the cards take up full width within the grid */
+}
+
+/* Hover Effect for Resource Cards */
+.resource-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    /* Elevate the card on hover */
+}
+
+/* Resource Category Heading */
+.resource-category h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* List Styling Inside Resource Cards */
+.resource-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-category ul li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.resource-category ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.resource-category ul li a:hover {
+    color: #ff6600;
+}
+
+/* Resource Category Border on Hover */
+.resource-category:hover {
+    border-color: #ff6600;
+    /* Border color change when hovering over a card */
+}
+
+/* Responsive Styles */
+@media (max-width: 350px) {
+
+    /* Header */
+    .fade-in {
+        height: 44vw;
+    }
+
+    header p {
+        font-size: 4vw;
+        font-weight: 600;
+    }
+
+    header nav {
+        margin-left: 7vw;
+    }
+
+    header nav a {
+        list-style-type: none;
+        font-size: 1vw;
+        display: flex;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .anchor {
+        line-height: 10px;
+        font-size: 2.8vw;
+    }
+
+
+
+
+    /* Content Sections */
+    .content {
+        padding: 30px 10px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+
+    /* Resources Section */
+    #resources-info {
+        padding: 40px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .resource-category {
+        padding: 20px;
+    }
+
+    .resource-category h3 {
+        font-size: 1.4rem;
+    }
+}
